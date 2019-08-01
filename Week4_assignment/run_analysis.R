@@ -1,7 +1,7 @@
 ## run_analysis works on the assumption that the files from
 ##"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 ##have been downloaded and extracted and placed in the working directory
-##setwd("~/R/datasciencecoursera/Cleaning_datascience/Week4_assignment")
+setwd("~/R/datasciencecoursera/Cleaning_datascience/Week4_assignment")
 
 ##load required libraries
 

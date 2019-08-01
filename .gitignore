@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 ss06pid.csv
+*.csv
+*.xlsx
+*.zip
+/Week4_assignment/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset

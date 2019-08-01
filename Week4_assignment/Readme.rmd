@@ -1,0 +1,39 @@
+---
+title: "Readme"
+author: "preethi"
+date: "8/1/2019"
+output: html_document
+---
+
+#README document for the run_analysis program. 
+This was a part of the Getting and Cleaning Data course in the Data Science Specialization. 
+The data for the project was from the Samsung Galaxy S smartphones accelorometer. 
+The data for the project was obtained from (link) ["https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip]
+
+The dataset given includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+
+The run_analysis script works on the assumption that the file has been downloaded and extracted and placed in the working directory. 
+
+First the two libraries data.table and dplyr are loaded. 
+
+After which text files with the meta data are read (i.e. the features_info.txt and the activity_labels.txt) 
+
+

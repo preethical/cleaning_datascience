@@ -56,7 +56,7 @@ names(new_table) <- gsub("Gyr", "Gyroscope", names(new_table))
 names(new_table) <- gsub("Mag", "Magnitude", names(new_table))
 names(new_table) <- gsub("BodyBody", "Body", names(new_table))
 names(new_table) <- gsub("^t", "Time", names(new_table))
-names(new_table) <- gsub("^f", "Frequemcy", names(new_table))
+names(new_table) <- gsub("^f", "Frequency", names(new_table))
 names(new_table) <- gsub("MEAN", "Mean", names(new_table))
 names(new_table) <- gsub("std", "SD", names(new_table))
 

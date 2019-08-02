@@ -2,7 +2,7 @@
 title: "CODEBOOK"
 author: "preethi"
 date: "8/1/2019"
-output: html_document
+output: word_document
 ---
 The list of Variable names in the file tidy.txt are as follows
 

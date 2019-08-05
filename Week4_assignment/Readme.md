@@ -2,12 +2,17 @@
 title: "README"
 author: "preethi"
 date: "8/1/2019"
-output: html_document
+output: 
 ---
 
 README document for the run_analysis program. 
 
-This was a part of the Getting and Cleaning Data course in the Data Science Specialization. 
+This repository was created as a part of the Getting and Cleaning Data course in the Data Science Specialization. 
+
+First download and  the data file into your R working directory then download the R source code into working directory. Run the code to generate the tidy data file. 
+
+Data
+=================
 
 The data for the project was from the Samsung Galaxy S smartphones accelorometer. 
 The data for the project was obtained from "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -19,10 +24,10 @@ Each person performed six activities (activity_labels: WALKING, WALKING_UPSTAIRS
 Feature Selection 
 =================
 For each record in the dataset, there is a 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. - Triaxial Angular velocity from the gyroscope
+- A 561-feature vector with time and frequency domain variables
+- Its activity label
 - An identifier of the subject who carried out the experiment
 
 The dataset given included the following files:
@@ -52,7 +57,15 @@ Test Folder
 
 - 'subject_test.txt': Subject identifiers in test dataset
 
-The Program
+Details of the files included in this repository
+
+Readme.md 
+=========================================
+
+This file tries to explain the purpose of program and the contents of the repository
+
+
+Run_analysis.R - The Program
 =========================================
 
 The run_analysis script works on the assumption that the file has been downloaded and extracted and placed in the working directory. 
@@ -77,6 +90,15 @@ From this dataset then the average of each variable for the activity and subject
 
 To this dataset, I used the order function to order it based on subject and activity and remove the activity_num since that seemed redunant. 
 
-This tidy set was then written into a file tidy.txt which has been saved in this repository.
+tidy.txt
+=========================================
+This tidy data set produced by the analysis was then written into the file tidy.txt which has been saved in this repository.
+
+Codebook.md
+=========================================
+
+This has the list of variables describing the dataset.
+
+
 
 

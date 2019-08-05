@@ -9,7 +9,26 @@ README document for the run_analysis program.
 
 This repository was created as a part of the Getting and Cleaning Data course in the Data Science Specialization. 
 
-First download and  the data file into your R working directory then download the R source code into working directory. Run the code to generate the tidy data file. 
+First download and extract the data file from "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" into your R working directory and then download the run_analysis.R script into your working directory. Source the code to generate your tidy data file. 
+
+Details of the files included in this repository
+=========================================
+
+Run_analysis.R - The Program
+=========================================
+
+The run_analysis script works on the assumption that the files have been downloaded and extracted and placed in the working directory. It generates a tidy.txt file which is a part of the repository
+
+Codebook.md
+=========================================
+The codebook.md describes the variables, and the work that was performed included the specific .txt files used to clean up the data moving into specifics about the run_analysis.R program
+
+tidy.txt
+=========================================
+The tidy.txt file which is the clean end product of the run_analysis program has 180 observations and 68 variables.
+
+
+Given below is a description of the data
 
 Data
 =================
@@ -30,7 +49,7 @@ For each record in the dataset, there is a
 - Its activity label
 - An identifier of the subject who carried out the experiment
 
-The dataset given included the following files:
+The dataset given includs the following files:
 =========================================
 
 - 'README.txt'
@@ -42,6 +61,7 @@ The dataset given included the following files:
 - 'activity_labels.txt': Links the class labels with their activity name.
 
 Training folder
+=========================================
 
 - 'train/X_train.txt': Training set.
 
@@ -50,6 +70,7 @@ Training folder
 - 'Subject_train.txt': Subject identifiers in training dataset 
 
 Test Folder
+=========================================
 
 - 'test/X_test.txt': Test set.
 
@@ -57,47 +78,8 @@ Test Folder
 
 - 'subject_test.txt': Subject identifiers in test dataset
 
-Details of the files included in this repository
-
-Readme.md 
-=========================================
-
-This file tries to explain the purpose of program and the contents of the repository
 
 
-Run_analysis.R - The Program
-=========================================
-
-The run_analysis script works on the assumption that the file has been downloaded and extracted and placed in the working directory. 
-
-First the two libraries data.table and dplyr are loaded. 
-
-After which text files with the meta-data are read (i.e. the features_info.txt and the activity_labels.txt) 
-
-After which the training and test data (3 files) are read with Header = FALSE since the first line is not the variable names. 
-
-The test and the training data are then merged into 3 seperate files namely: Subject(subject identifiers for test and training), activity (test and training labels) and features(Test and training set).
-
-Names of the columns are then added using the metadata provided and a complete dataset is created by merging the subject, activity and features. 
-
-Then the columns containing only the mean and standard deviation are extracted into a new dataframe.
-
-And then the new dataframe is merged with the activity labels (metafile) so as to also include the activity name that corresponds to the activity number that already exists in the dataframe. 
-
-Then using the gsub functiont the descriptors are made more elaborate. 
-
-From this dataset then the average of each variable for the activity and subject number are calculate using the aggregate function and it gives a new data set. 
-
-To this dataset, I used the order function to order it based on subject and activity and remove the activity_num since that seemed redunant. 
-
-tidy.txt
-=========================================
-This tidy data set produced by the analysis was then written into the file tidy.txt which has been saved in this repository.
-
-Codebook.md
-=========================================
-
-This has the list of variables describing the dataset.
 
 
 

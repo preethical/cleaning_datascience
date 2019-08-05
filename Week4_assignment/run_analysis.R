@@ -40,7 +40,12 @@ Complete_data <- cbind(features,activity,subject)
 
 ## 2. extract columns for mean and standard deviation
 
-Mean_std_colums <- grep(".*mean.*|.*std.*",names(Complete_data), ignore.case =TRUE)
+##Mean_std_colums <- features[grep(".*mean().*|.*std().*", features)]
+
+## regexr.com: mean\(\)|std\(\)
+## Preethi old: .*mean\(\).*|.*std\(\).*
+
+Mean_std_colums <- grep("mean\\(\\)|std\\(\\)", names(Complete_data))
 required_dataframe <- c(Mean_std_colums,562,563)
 extracted_columns <- Complete_data[,required_dataframe]
 
@@ -51,12 +56,7 @@ new_table$activity_name <- as.character(new_table$activity_name)
 
 ##4. Appropriately labels the data set with descriptive variable names
 
-names(new_table) <- gsub("Acc", "Accelerometer", names(new_table))
-names(new_table) <- gsub("Gyr", "Gyroscope", names(new_table))
-names(new_table) <- gsub("Mag", "Magnitude", names(new_table))
 names(new_table) <- gsub("BodyBody", "Body", names(new_table))
-names(new_table) <- gsub("^t", "Time", names(new_table))
-names(new_table) <- gsub("^f", "Frequency", names(new_table))
 names(new_table) <- gsub("MEAN", "Mean", names(new_table))
 names(new_table) <- gsub("std", "SD", names(new_table))
 
